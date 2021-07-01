@@ -3,7 +3,7 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=qt6-quickcontrols2
-_qtver=6.1.2
+_qtver=6.2.0-alpha
 pkgver=${_qtver/-/}
 pkgrel=1
 arch=(x86_64)
@@ -14,8 +14,8 @@ depends=(qt6-declarative)
 makedepends=(cmake vulkan-headers)
 groups=(qt6)
 _pkgfn="${pkgname/6-/}-everywhere-src-$_qtver"
-source=(https://download.qt.io/official_releases/qt/${pkgver%.*}/$_qtver/submodules/$_pkgfn.tar.xz)
-sha256sums=('808f30c3308654ff3c1be6c8e304a59060c5ea7ff6afe7b21fb55be7d5442f28')
+source=(https://download.qt.io/development_releases/qt/${pkgver%.*}/$_qtver/submodules/$_pkgfn.tar.xz)
+sha256sums=('40c8af99adb342c45809bfe06c73ac7d923433518cb7bc7997f6fc40e169c4c5')
 
 build() {
   cmake -B build -S $_pkgfn
